@@ -1,4 +1,8 @@
 # Optimize_NextGen
 OS performances optimization
 
-v3.8 - 08-06-2019
+Last update: v3.8 
+
+08-06-2019
+
+https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
