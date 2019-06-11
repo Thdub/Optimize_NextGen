@@ -154,3 +154,8 @@
 	
 	With this tool you can delete multiple or all non-present devices.
 
+-11-06-2019 : Optimize NextGen v3.8.2
+
+	-Added event viewer logs clearing to end cleaning task.
+
+ 
