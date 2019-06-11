@@ -366,6 +366,7 @@
 	call :Save_PS_Scripts
 	rmdir "%TEMP%\SettingsBackup\Scripts (Restore or Apply again)\PowerManagement" /s /q >NUL 2>&1
 	call :Save_Before_End
+	call :Clear_EventViewer_Logs
 	goto :Restart_Information
 
 :TASK_O
