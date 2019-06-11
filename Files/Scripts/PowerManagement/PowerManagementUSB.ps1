@@ -1,5 +1,5 @@
 # Custom Title
-$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8 | Powershell Script"
+$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8.2 | Powershell Script"
 
 # Start log
 Start-Transcript -Path ("$env:TEMP\SettingsBackup\Logs\PowerManagementUSB.log") -Append | out-null
