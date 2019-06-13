@@ -4,11 +4,11 @@
 
 -17-01-2019 : Optimize Next Gen v2, complete re-write.
 
-	-Now includes a Main Menu to apply full optimization or only parts of the script (cf spoiler screenshot).
+	-Now includes a Main Menu to apply full optimization or only parts of the script (cf spoiler screenshot in MDL forum thread).
 
 	-Merged Server and LTSC in one unique .bat: Windows edition is detected inside the script.
 
-	-Added Power Management Settings in "Performances settings task" (cf spoiler screenshot).
+	-Added Power Management Settings in "Performances settings task".
 
 	-Services backup is now (much) faster.
 
@@ -50,7 +50,7 @@
 
 	-New Separate Options in the Main Menu : Telemetry only, Privacy only, TRIM (cf main menu screenshot)
 	
-	-Added HID Selective suspend settings, to disable/untick "Allow the computer to turn off this device to save power" for HID Devices under Power Management tab in Device Manager:
+	-Added HID selective suspend setting, to disable/untick "Allow the computer to turn off this device to save power" for HID Devices under Power Management tab in Device Manager:
 	
 	-Added Memory Compression and PageCombining, only for Windows Server (cf spoiler screenshots).
 
