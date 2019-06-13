@@ -49,7 +49,9 @@
 	new functions. Note: TRIM is excluded from fast optimization (you don't need to trim that often).
 
 	-New Separate Options in the Main Menu : Telemetry only, Privacy only, TRIM (cf main menu screenshot)
-
+	
+	-Added HID Selective suspend settings, to disable/untick "Allow the computer to turn off this device to save power" for HID Devices under Power Management tab in Device Manager:
+	
 	-Added Memory Compression and PageCombining, only for Windows Server (cf spoiler screenshots).
 
 	-Fixed a missing double quote. Not that important, it was just making one of the restore functions exit at the end of the process, instead of pause/going to start menu.
