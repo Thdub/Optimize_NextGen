@@ -160,4 +160,7 @@
 
 	-Added event viewer logs clearing to end cleaning task.
 
+-07-07-2019 : Optimize NextGen v3.8.5
+
+	-Added more privacy settings (in miscellaneous section for now). 
  
