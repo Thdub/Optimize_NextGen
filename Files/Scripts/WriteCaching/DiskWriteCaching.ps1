@@ -15,7 +15,7 @@ Param(
 )
 
 # Custom Title
-$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8.5 | Powershell Script"
+$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8.6 | Powershell Script"
 $runStart = [DateTime]::Now
 
 # Set dskcache.exe utility flag
