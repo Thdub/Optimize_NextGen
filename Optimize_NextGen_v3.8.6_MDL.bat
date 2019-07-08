@@ -740,28 +740,130 @@
 	del /f /s /q %ProgramData%\Microsoft\Diagnosis\ETLLogs\* >NUL 2>&1
 	echo [92mDone.[97m
 	<nul set /p dummyName=%BS%  -Tasks: 
-	schtasks /Change /TN "Microsoft\Windows\AppID\SmartScreenSpecific" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Application Experience\AitAgent" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Application Experience\ProgramDataUpdater" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Application Experience\StartupAppTask" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Autochk\Proxy" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\CloudExperienceHost\CreateObjectTask" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Uploader" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\DiskFootprint\Diagnostics" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\FileHistory\File History (maintenance mode)" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\NetTrace\GatherNetworkInfo" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\PerfTrack\BackgroundConfigSurveyor" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\PI\Sqm-Tasks" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Shell\FamilySafetyMonitor" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Shell\FamilySafetyRefresh" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Shell\FamilySafetyUpload" /Disable >NUL 2>&1
-	schtasks /Change /TN "Microsoft\Windows\Windows Error Reporting\QueueReporting" /Disable >NUL 2>&1
+:: Disable Tasks
+	schtasks /Change /TN "\Microsoft\Windows\AppID\SmartScreenSpecific" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\AppID\VerifiedPublisherCertStoreCheck" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Application Experience\AitAgent" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Application Experience\ProgramDataUpdater" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Application Experience\StartupAppTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\ApplicationData\AppUriVerifierDaily" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\ApplicationData\AppUriVerifierInstall" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\ApplicationData\DsSvcCleanup" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Autochk\Proxy" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Customer Experience Improvement Program\HypervisorFlightingTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Customer Experience Improvement Program\Uploader" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Device information\Device" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Device Setup\Metadata Refresh" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\DiskFootprint\Diagnostics" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\End Of Support\Notify1" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\End Of Support\Notify2" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\ErrorDetails\EnableErrorDetailsUpdate" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\ErrorDetails\ErrorDetailsUpdate" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Feedback\Siuf\DmClient" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\FileHistory\File History [maintenance mode]" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Flighting\OneSettings\RefreshCache" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\LanguageComponentsInstaller\Installation" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\LanguageComponentsInstaller\ReconcileLanguageResources" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Location\Notifications" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Maintenance\WinSAT" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\ActivateWindowsSearch" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\ConfigureInternetTimeService" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\DispatchRecoveryTasks" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\ehDRMInit" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\InstallPlayReady" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\mcupdate" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\MediaCenterRecoveryTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\ObjectStoreRecoveryTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\OCURActivate" /Disable >NUL 2>&1" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\OCURDiscovery" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\PBDADiscovery" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\PBDADiscoveryW1" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\PBDADiscoveryW2" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\PvrRecoveryTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\PvrScheduleTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\RegisterSearch" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\ReindexSearchRoot" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\SqlLiteRecoveryTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Media Center\UpdateRecordPath" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Mobile Broadband Accounts\MNO Metadata Parser" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\NetTrace\GatherNetworkInfo" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\NlaSvc\WiFiTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\PerfTrack\BackgroundConfigSurveyor" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\PI\Sqm-Tasks" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\PushToInstall\LoginCheck" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\PushToInstall\Registration" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\RemoteAssistance\RemoteAssistanceTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\RemovalTools\MRT_ERROR_HB" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\SettingSync\BackgroundUploadTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\SettingSync\BackupTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\SettingSync\NetworkStateChangeTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\gwx\launchtrayprocess" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\gwx\refreshgwxconfig" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\gwx\refreshgwxconfigandcontent" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\Logon-10s" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\Logon-5d" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\MachineUnlock-10s" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\MachineUnlock-5d" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\OutOfIdle-10s" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\OutOfIdle-5d" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\OutOfSleep-10s" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\OutOfSleep-5d" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\refreshgwxconfig-B" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\Telemetry-4xd" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\Time-10s" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Setup\GWXTriggers\Time-5d" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Shell\CreateObjectTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyMonitor" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyMonitorToastTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyRefresh" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyRefreshTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Shell\FamilySafetyUpload" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\SideShow\SessionAgent" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\SideShow\SystemDataProviders" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Speech\SpeechModelDownloadTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\Reboot" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\Schedule Scan" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\Schedule Scan Static Task" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_Broker_Display" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_RebootDisplay" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_UxBroker" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_UxBroker_Display" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_UxBroker_ReadyToReboot" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_UxBroker_WnfDisplay" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UpdateOrchestrator\USO_WnfDisplay" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\UPnP\UPnPHostConfig" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\User Profile Service\HiveUploadTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\WaaSMedic\PerformRemediation" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Windows Defender\Windows Defender Scheduled Scan" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\Windows Error Reporting\QueueReporting" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\WindowsUpdate\Automatic App Update" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\Windows\WindowsUpdate\sih" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\XblGameSave\XblGameSaveTask" /Disable >NUL 2>&1
+	schtasks /Change /TN "\Microsoft\XblGameSave\XblGameSaveTaskLogon" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmMon_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmRep" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmRep_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmRepCR1_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmRepCR2_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmRepCR3_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}" /Disable >NUL 2>&1
+	schtasks /Change /TN "\NvTmRepOnLogon_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}" /Disable >NUL 2>&1
+	for /f "tokens=1,2 delims==" %%s IN ('wmic path win32_useraccount where name^='%username%' get sid /value ^| find /i "SID"') do set "UserSID=%%t"
+	schtasks /Change /TN "\OneDrive Standalone Update Task-%UserSID%" /Disable >NUL 2>&1
+:: Delete Tasks
+	schtasks /Delete /F /TN "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" >NUL 2>&1
+	schtasks /Delete /F /TN "\Microsoft\Windows\Application Experience\ProgramDataUpdater" >NUL 2>&1
+	schtasks /Delete /F /TN "\Microsoft\Windows\Application Experience\AitAgent" >NUL 2>&1
+	schtasks /Delete /F /TN "\Microsoft\Windows\PerfTrack\BackgroundConfigSurveyor" >NUL 2>&1
 	echo [92mDone.[97m
 	<nul set /p dummyName=%BS%  -Office Tasks: 
 	schtasks /Change /TN "Microsoft\Office\Office 15 Subscription Heartbeat" /Disable >NUL 2>&1
@@ -776,10 +878,6 @@
 	schtasks /Change /TN "Microsoft\Office\OfficeTelemetry\AgentFallBack2016" /Disable >NUL 2>&1
 	schtasks /Change /TN "Microsoft\Office\OfficeTelemetryAgentLogOn" /Disable >NUL 2>&1
 	schtasks /Change /TN "Microsoft\Office\OfficeTelemetryAgentLogOn2016" /Disable >NUL 2>&1
-	schtasks /Delete /F /TN "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" >NUL 2>&1
-	schtasks /Delete /F /TN "\Microsoft\Windows\Application Experience\ProgramDataUpdater" >NUL 2>&1
-	schtasks /Delete /F /TN "\Microsoft\Windows\Application Experience\AitAgent" >NUL 2>&1
-	schtasks /Delete /F /TN "\Microsoft\Windows\PerfTrack\BackgroundConfigSurveyor" >NUL 2>&1
 	echo [92mDone.[97m
 	<nul set /p dummyName=%BS%  -Office Registry: 
 	reg add HKCU\Software\Microsoft\Office\Common\ClientTelemetry /v DisableTelemetry /t REG_DWORD /d "1" /f >NUL 2>&1
@@ -968,9 +1066,9 @@
 	reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}" /v "Value" /t REG_SZ /d "Deny" /f >NUL 2>&1
 	reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSyncProviderNotifications" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Patching Explorer leaks
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "AllowOnlineTips" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "AllowOnlineTips" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /t REG_DWORD /d "0" /f >NUL 2>&1
 	reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" /v "PeopleBand" /t REG_DWORD /d "0" /f >NUL 2>&1
 	reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\GameDVR" /v "AppCaptureEnabled" /t REG_DWORD /d "0" /f >NUL 2>&1
 	reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\GameDVR" /v "AudioCaptureEnabled" /t REG_DWORD /d "0" /f >NUL 2>&1
@@ -1912,82 +2010,82 @@ goto :eof
 ::============================================================================================================
 	<nul set /p dummyName=Adding miscellaneous settings...
 :: Disabling CEIP
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Disabling remote Scripted Diagnostics Provider query
-	reg add "HKLM\Software\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy" /v "EnableQueryRemoteServer" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy" /v "DisableQueryRemoteServer" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\Software\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy" /v "EnableQueryRemoteServer" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\ScriptedDiagnosticsProvider\Policy" /v "DisableQueryRemoteServer" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Disabling remote Scheduled Diagnostics execution
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics" /v "EnabledExecution" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\ScheduledDiagnostics" /v "EnabledExecution" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Disabling auto-reboot after update install
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoRebootWithLoggedOnUsers" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoRebootWithLoggedOnUsers" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Disabling Peernet
-	reg add "HKLM\Software\Policies\Microsoft\Peernet" /v "Disabled" /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add "HKLM\Software\Policies\Microsoft\Windows\BITS" /v "DisablePeerCachingClient" /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add "HKLM\Software\Policies\Microsoft\Windows\BITS" /v "DisablePeerCachingServer" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Peernet" /v "Disabled" /t REG_DWORD /d "1" /f >NUL 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Windows\BITS" /v "DisablePeerCachingClient" /t REG_DWORD /d "1" /f >NUL 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Windows\BITS" /v "DisablePeerCachingServer" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Disabling telemetry uploading
  :: os64bit
-	reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DisableEnterpriseAuthProxy" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DisableEnterpriseAuthProxy" /t REG_DWORD /d "1" /f >NUL 2>&1
  :: Changing default telemetry proxy to localhost
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "TelemetryProxy" /t REG_SZ /d "localhost:0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "TelemetryProxy" /t REG_SZ /d "localhost:0" /f >NUL 2>&1
 :: Checking Error Reporting privacy settings
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_SZ /d "1" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "MachineID" /t REG_SZ /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\WMR" /v "Disable" /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultConsent" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent" /v "NewUserDefaultConsent" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_SZ /d "1" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "MachineID" /t REG_SZ /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\WMR" /v "Disable" /t REG_DWORD /d "1" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultConsent" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent" /v "NewUserDefaultConsent" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Disabling Removable drive indexing
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "DisableRemovableDriveIndexing" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "DisableRemovableDriveIndexing" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Disabling Remote Assistance
-	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d "0" /f >nul 2>&1	
+	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d "0" /f >NUL 2>&1	
 :: Disabling Teredo/IPv6 tunneling
-	netsh int teredo set state disabled >nul 2>&1
+	netsh int teredo set state disabled >NUL 2>&1
 :: Preventing device meta-data collection
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v "DeviceMetadataServiceURL" /t REG_SZ /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v "DeviceMetadataServiceURL" /t REG_SZ /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d "1" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Patching IGMP
-	reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "IGMPLevel" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "IGMPLevel" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Patching Web Proxy Auto Discovery
-	netsh winhttp reset proxy >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "UseDomainNameDevolution" /t REG_DWORD /d "0" /f >nul 2>&1
+	netsh winhttp reset proxy >NUL 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "UseDomainNameDevolution" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Patching DNS Smart Name Resolution
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "DisableSmartNameResolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "DisableSmartNameResolution" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Patching Link-local Multicast Name Resolution
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "EnableMulticast" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "DisableParallelAandAAAA" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v "EnableMulticast" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v "DisableParallelAandAAAA" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Patching Windows SMB data leaks
-	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" /v "RestrictReceivingNTLMTraffic" /t REG_DWORD /d "2" /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" /v "RestrictSendingNTLMTraffic" /t REG_DWORD /d "2" /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v "SMB1" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" /v "RestrictReceivingNTLMTraffic" /t REG_DWORD /d "2" /f >NUL 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" /v "RestrictSendingNTLMTraffic" /t REG_DWORD /d "2" /f >NUL 2>&1
+	reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v "SMB1" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Patching NVIDIA telemetry leaks
 	reg query "HKCU\Software" | findstr /i "NVIDIA" >nul && (
-		reg add "HKCU\Software\NVIDIA Corporation\NVControlPanel2\Client" /v "OptInOrOutPreference" /t REG_DWORD /d "0" /f >nul 2>&1
+		reg add "HKCU\Software\NVIDIA Corporation\NVControlPanel2\Client" /v "OptInOrOutPreference" /t REG_DWORD /d "0" /f >NUL 2>&1
 	)
 :: Patching Internet Explorer/Edge data leaks
-	reg add "HKLM\Software\Policies\Microsoft\Internet Explorer\SQM" /v "DisableCustomerImprovementProgram" /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add "HKLM\Software\Policies\Microsoft\Internet Explorer\Privacy" /v "EnableInPrivateBrowsing" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\Software\Policies\Microsoft\Internet Explorer\Safety\PrivacIE" /v "DisableLogging" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Internet Explorer\SQM" /v "DisableCustomerImprovementProgram" /t REG_DWORD /d "1" /f >NUL 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Internet Explorer\Privacy" /v "EnableInPrivateBrowsing" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Internet Explorer\Safety\PrivacIE" /v "DisableLogging" /t REG_DWORD /d "1" /f >NUL 2>&1
 :: Patching Windows Defender data leaks
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReportingLocation" /t REG_MULTI_SZ /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d "2" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SpyNetReportingLocation" /t REG_MULTI_SZ /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d "2" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReportingLocation" /t REG_MULTI_SZ /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d "2" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SpyNetReportingLocation" /t REG_MULTI_SZ /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d "2" /f >NUL 2>&1
 :: Patching Windows MRT data leaks
-	reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontReportInfectionInformation" /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\RemovalTools\MpGears" /v "HeartbeatTrackingIndex" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Microsoft\RemovalTools\MpGears" /v "SpyNetReportingLocation" /t REG_SZ /d "0" /f >nul 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontReportInfectionInformation" /t REG_DWORD /d "1" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\RemovalTools\MpGears" /v "HeartbeatTrackingIndex" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\RemovalTools\MpGears" /v "SpyNetReportingLocation" /t REG_SZ /d "0" /f >NUL 2>&1
 :: Patching Maps/SystemSettings leaks
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Maps" /v "AutoDownloadAndUpdateMapData" /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Maps" /v "AllowUntriggeredNetworkTrafficOnSettingsPage" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Maps" /v "AutoDownloadAndUpdateMapData" /t REG_DWORD /d "0" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Maps" /v "AllowUntriggeredNetworkTrafficOnSettingsPage" /t REG_DWORD /d "0" /f >NUL 2>&1
 :: Clearing unique ad-tracking ID token
-	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Id" /t REG_SZ /d "null" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Id" /t REG_SZ /d "null" /f >NUL 2>&1
 :: Configuring SmartScreen control permissions
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen" /v "ConfigureAppInstallControl" /t REG_SZ /d "Anywhere" /f >nul 2>&1
-	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen" /v "ConfigureAppInstallControlEnabled" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen" /v "ConfigureAppInstallControl" /t REG_SZ /d "Anywhere" /f >NUL 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen" /v "ConfigureAppInstallControlEnabled" /t REG_DWORD /d "1" /f >NUL 2>&1
 	echo [92mDone.[97m
 goto :eof
 
