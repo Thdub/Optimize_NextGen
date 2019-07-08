@@ -163,4 +163,7 @@
 -07-07-2019 : Optimize NextGen v3.8.5
 
 	-Added more privacy settings (in miscellaneous section for now). 
- 
+ 	
+-08-07-2019 : Optimize NextGen v3.8.6
+ 	-Cleared duplicates/redundant settings
+
