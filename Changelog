@@ -139,31 +139,24 @@
 	Some important registry settings are redundantly included as Group Policy settings. If you launched full/fast optimization or Group Policy single task before, the tweaks you just removed are still stored as GPO, which means that while tweaks were removed, a future "GpUpdate" command would re-add them.
 	
 	In this case (only), it's better to launch Group Policy task again with these only the registry tweaks removed, or to reset Group Policy totally. 
-
 	So, I made 4 new policy files without those registry settings and added option to set again, reset Group Policy totally, or leave like this.
-
 	-Minor cosmetic changes
 
 -08-06-2019 : Optimize NextGen v3.8
-
 	-Added DeviceCleanup cmdline tool:
-	
 	https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
-
         Each once attached device leaves an entry in the Windows device management. 
-	
 	By means of the Windows device manager you can delete one by one only. 
-	
 	With this tool you can delete multiple or all non-present devices.
 
 -11-06-2019 : Optimize NextGen v3.8.2
-
 	-Added event viewer logs clearing to end cleaning task.
 
 -07-07-2019 : Optimize NextGen v3.8.5
-
 	-Added more privacy settings (in miscellaneous section for now). 
  	
 -08-07-2019 : Optimize NextGen v3.8.6
  	-Cleared duplicates/redundant settings
+	-Updated disabled scheduled tasks, a lot where added.
+
 
