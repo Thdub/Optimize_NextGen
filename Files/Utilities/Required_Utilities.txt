@@ -1,4 +1,4 @@
-Script requires some additional files.
+Script requires some additional files here.
 -DeviceCleanupCmd.exe
 -dskcache.exe
 -GetKey.exe
@@ -9,5 +9,5 @@ Script requires some additional files.
 You can download release here:
 https://github.com/Thdub/Optimize_NextGen/releases
 
-Or separately there:
+Or files separately there:
 https://www.upload.ee/files/10192223/Optimize_NextGen_Binaries.zip.html
