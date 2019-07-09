@@ -1,0 +1,13 @@
+Script requires some additional files.
+-DeviceCleanupCmd.exe
+-dskcache.exe
+-GetKey.exe
+-Microsoft.Search.Interop.dll
+-nircmd.exe
+-NSudoC.exe
+
+You can download release here:
+https://github.com/Thdub/Optimize_NextGen/releases
+
+Or separately there:
+https://www.upload.ee/files/10192223/Optimize_NextGen_Binaries.zip.html
