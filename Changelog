@@ -55,15 +55,15 @@
 		/fast=fast mode (no backup or choices)
 		/full=full mode (every optimization with choices)
 		/secret=fast mode with hidden console, except restart countdown and prompt at the end.	
-	Note: If you prefer to run .bat instead, just open/extract .exe with 7zip or winrar. 
-	.bat script also accepts switches, same functionalities, with just a cosmetic difference: shell/console "changes" are apparent.
+		Note: If you prefer to run .bat instead, just open/extract .exe with 7zip or winrar. 
+		.bat script also accepts switches, same functionalities, with just a cosmetic difference: shell/console "changes" are apparent.
 
 	-Added a script to quickly create .exe shortcuts with all switches.
 	-Added (and modified a bit) Indexing options setting, cf here: https://github.com/Thdub/Set_Indexing_Options
 
 -05-06-2019: Optimize NextGen v3.6
 	-Firefox Template updated to v1.7, changelog here: https://github.com/mozilla/policy-templates/releases
-	.adml (policy definitions) are now available in different languages (de, en, es, it, sp) and will be imported according to your OS language.
+		.adml (policy definitions) are now available in different languages (de, en, es, it, sp) and will be imported according to your OS language.
 	-Removed some Firefox policies (locked values) and few personal settings I had forgotten to remove, like https://google.com/ncr Home Page.
 	-Added /offline switch for offline scenarios: deployment/post-install script, logon/logoff script...
 		Usage: Optimize_NextGen_MDL.exe /offline, or Optimize_NextGen_MDL.bat /offline (if you extracted .bat from SFX archive).
@@ -78,17 +78,17 @@
 	-Modified Microsoft account policy (security setting) to: "Users can't add Microsoft accounts", to avoid people using microsoft account being 
 	locked out.
 	-Added option to set Group Policy again or to reset Group Policy after registry tweak removing (Restore menu):
-	Some important registry settings are redundantly included as Group Policy settings. If you launched full/fast optimization or Group Policy single task before, the tweaks you just removed are still stored as GPO, which means that while tweaks were removed, a future "GpUpdate" command would re-add them.
-	In this case (only), it's better to launch Group Policy task again with these only the registry tweaks removed, or to reset Group Policy totally. 
-	So, I made 4 new policy files without those registry settings and added option to set again, reset Group Policy totally, or leave like this.
+		Some important registry settings are redundantly included as Group Policy settings. If you launched full/fast optimization or Group Policy single task before, the tweaks you just removed are still stored as GPO, which means that while tweaks were removed, a future "GpUpdate" command would re-add them.
+		In this case (only), it's better to launch Group Policy task again with these only the registry tweaks removed, or to reset Group Policy totally. 
+		So, I made 4 new policy files without those registry settings and added option to set again, reset Group Policy totally, or leave like this.
 	-Minor cosmetic changes
 
 -08-06-2019 : Optimize NextGen v3.8
 	-Added DeviceCleanup cmdline tool:
-	https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
-        Each once attached device leaves an entry in the Windows device management. 
-	By means of the Windows device manager you can delete one by one only. 
-	With this tool you can delete multiple or all non-present devices.
+		https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
+       		Each once attached device leaves an entry in the Windows device management. 
+		By means of the Windows device manager you can delete one by one only. 
+		With this tool you can delete multiple or all non-present devices.
 
 -11-06-2019 : Optimize NextGen v3.8.2
 	-Added event viewer logs clearing to end cleaning task.
