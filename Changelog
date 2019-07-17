@@ -132,5 +132,14 @@
 	  Haven't had time yet to update "Restore Tweaks" script, it's a bit long, sorry.
 	  Neither had to update "remove registry tweaks" part in the main script.
 	  But few are missing, since most of the settings are set by GPO.
-	- TRIM command will only run if system drive is detected as a SSD (before that, if would not do anything anyway if system isn't a SSD, but at the end it will be faster than if you chose YES)
-	- Small bug fixes.
+	- TRIM command will only run if system drive is detected as a SSD 
+	  In previous version it would not do anything anyway if choose to run TRIM command while system drive isn't a SSD.
+    	  Added command makes the script a bit slower, but didn't seem logical to propose this option for users with HDD.
+	- Added info in Services configuration/File and Printer Sharing Enable/Disable choice ( Press D if you don't have home network and/or don't use network printer).
+	- Added infos about defaults settings in Fast Mode. 
+	  Note that in fast mode settings are geared towards maximum performances.
+	- Small edits in backed up powershell scripts : Log path has been changed to script folder.
+ 	  Note: These are the scripts provided in backup folder if you want to launch the tasks outside main script.
+	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer)
+	- Some small cosmetic changes cursor/colors etc...
+	- Small bug fixes (found quite a lot of glitches, but happily all harmless...)
