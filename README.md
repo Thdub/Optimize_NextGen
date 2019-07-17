@@ -13,10 +13,12 @@ You can apply FULL optimization, or single optimization/restoration tasks from t
 It will only work with build 17763 (or above), either Server 2019 or LTSC, but also works with other Windows 10 editions now. Note: I couldn't test services optimization for "regular" Windows 10 editions yet, so, for now, services configuration feature is disabled for these editions.
 
 You can use these switches :
-    
+
     /full (full script/interactive)   
     /fast (fast mode)
     /offline (same as fast mode but without restart prompt, for offline scenarios)
 
+Links :
+   
     Download: https://github.com/Thdub/Optimize_NextGen/releases
     Infos: https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
