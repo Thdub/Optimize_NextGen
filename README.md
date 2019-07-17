@@ -18,6 +18,5 @@ You can use these switches :
     /fast (fast mode)
     /offline (same as fast mode but without restart prompt, for offline scenarios)
 
-Download: https://github.com/Thdub/Optimize_NextGen/releases
-
-Infos: https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
+    Download: https://github.com/Thdub/Optimize_NextGen/releases
+    Infos: https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
