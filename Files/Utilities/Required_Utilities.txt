@@ -2,6 +2,7 @@ Script requires some additional files here.
 -DeviceCleanupCmd.exe
 -dskcache.exe
 -GetKey.exe
+-LGPO.exe
 -Microsoft.Search.Interop.dll
 -nircmd.exe
 -NSudoC.exe
@@ -10,4 +11,4 @@ You can download release here:
 https://github.com/Thdub/Optimize_NextGen/releases
 
 Or files separately there:
-https://www.upload.ee/files/10192223/Optimize_NextGen_Binaries.zip.html
+https://www.upload.ee/files/10230433/Utilities.zip.html
