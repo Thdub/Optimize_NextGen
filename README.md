@@ -4,7 +4,7 @@ OS performances optimization for Windows Server 2019, Windows 10 LTSC and Window
 It is primarily designed for individual workstations with heavy workload, such as professional Audio or 3D applications. 
 In short, systems used mainly for one task.
 
-The goal is to optimize performances settings, disabling useless functions, and maximizing privacy, while favorizing whenever possible Group Policy settings for tweak reversibility and to keep "update resistant" settings (Unlike registry settings).
+The goal is to optimize performances settings, disabling useless functions, and maximizing privacy, while favorizing whenever possible Group Policy settings for tweak reversibility and to keep "update resistant" settings (unlike registry settings).
     
 Everything is fully reversible either from main script, or with backed up files and/or scripts.
 
