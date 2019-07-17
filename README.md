@@ -19,4 +19,6 @@ Download: https://github.com/Thdub/Optimize_NextGen/releases
 
 Infos: https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
 
-Note : It will only work with build 17763 (or above), either Server 2019 or LTSC, but also works with other Windows 10 editions now. I couldn't test services optimization for "regular" Windows 10 editions yet, so, for now, services configuration feature is disabled for these editions.
+Note : It will only work with build 17763 (or above). I couldn't test services optimization in non LTSC* editions yet, so, for now, services configuration feature is disabled for these editions, but the rest is same between Windows 10 and Windows 10 LTSC, (Server has some additional settings).
+
+*LTSC = Windows Server 2019 and Windows 10 LTSC, non LTSC = Windows 10 (Home/Pro/Enterprise)
