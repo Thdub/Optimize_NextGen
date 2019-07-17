@@ -134,3 +134,4 @@
 		But few are missing, since most of the settings are set by GPO.
 	- TRIM command will only run if system drive is detected as a SSD (before that, if would not do anything anyway if system isn't a SSD, but at the end it will be faster than if you chose YES)
 	- Small bug fixes.
+    
