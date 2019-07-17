@@ -99,3 +99,38 @@
 -08-07-2019 : Optimize NextGen v3.8.6
  	-Cleared duplicates/redundant settings
 	-Updated "Disable scheduled tasks" (a lot where added).
+
+-17-07-2019 : Optimize NextGen v3.9.5
+	-Major code improvment (learning every day...)
+	- Optional Microsoft Store and games settings :
+		Since some people use the Store, and even add Store to LTSC (still, wanting performances and privacy ?!?) I decided to add this as an option (instead of sending customized versions)
+		This was not the purpose of the script and I clearly stated for who/what it is targeted, but...yeah (some people won't read anyway)
+		It will query for Microsoft.StorePurchaseApp, and if detected/installed ask the user if he wants to apply or bypass store and apps settings.
+		Made it clear : after the prompt, added (Choose NO if you use the store)
+		Choosing YES will block store, store apps and games, and disable Microsoft Account creation (You can still logon with a previously created Microsoft Account though)
+		If the user chooses to bypass store settings, it will then ask if he wants to apply or bypass games settings.
+		Clear also : added (choose NO if you play games)
+		Choosing NO will keep gamebar, leave xboxsave scheduled task enabled etc. while YES will set all "game related" tweaks.
+	- Added Game Explorer deactivation (and of course restoration, in restore menu) : gameux.dll injects into games at startup and connects to MS servers.
+		It just renames .dll as .dll.bak to avoid leaking infos to ms servers.
+		Note: if you set this option, you will then see an (harmless) error in event viewer log:
+		Error setting traits on Provider {8444a4fb-d8d3-4f38-84f8-89960a1ef12f}, haven't found better solution for now.
+		Note2: If you previously chose to bypass games settings, this option is not proposed.
+	- Added more privacy settings (Thanks to some fellow MDL members ;) and Blackbird dev)
+	- New services startup configuration backup: Using now a customized vbs script which will save startup configuration as .bat and .reg file
+		.reg file provides delayed start detection, and on top of that backup task is (a lot) faster. 
+		(Thanks to Ramesh Srinivasan for tbe original script)
+	- Setting indexing options is also faster, and custom path indexing made - I hope - bulletproof (if you hit cancel or enter path twice for ex.)
+	- Keyboard improvments: Keyboard speed (enjoy fast keyboard!), and numlock set ON at startup (never understood why it wasn't the case by default)
+	- Added clear event viewer log option.
+	- Firefox Policy Template updated to v1.8 (Thanks to Michael Kaply)
+		https://github.com/mozilla/policy-templates/releases
+	- Added Scheduled Tasks script (if you want to disable scheduled tasks outside main script)
+	- Updated Registry Tweak script with latest tweaks. 
+		Note: This is the script provided to (re)apply tweaks outside main script.
+		Haven't had time yet to update "Restore Tweaks" script, it's a bit long, sorry.
+		Neither had to update "remove registry tweaks" part in the main script.
+		But few are missing, since most of the settings are set by GPO.
+	- TRIM command will only run if system drive is detected as a SSD (before that, if would not do anything anyway if system isn't a SSD, but at the end it will be faster than if you chose YES)
+	- Small bug fixes
+
