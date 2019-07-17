@@ -1,8 +1,8 @@
 # Custom Title
-$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8.6 | Powershell Script"
+$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.9.5 | Powershell Script"
 
 # Start log
-Start-Transcript -Path ("$env:TEMP\SettingsBackup\Logs\PowerManagementUSB.log") -Append | out-null
+Start-Transcript -Path "$env:TEMP\SettingsBackup\Logs\PowerManagementUSB.log" -Append | out-null
 
 # Start process for usbhubs
 $hubs = Get-WmiObject Win32_USBHub

@@ -15,18 +15,17 @@ Param(
 )
 
 # Custom Title
-$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8.6 | Powershell Script"
+$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.9.5 | Powershell Script"
 $runStart = [DateTime]::Now
 
 # Set dskcache.exe utility flag
 if ($WriteCache) {$flag="+"} else {$flag="-"}
 
 # Start log
-Start-Transcript -Path ("$env:TEMP\SettingsBackup\Logs\DiskWriteCaching.log") -Append | out-null
+Start-Transcript -Path "$env:TEMP\SettingsBackup\Logs\DiskWriteCaching.log" -Append | out-null
 
 foreach ($server in $servers)
 { 
-    Copy-Item -Path ".\..\..\Utilities\dskcache.exe" -Destination "$env:TEMP"
 
 	$Disk=Get-WmiObject Win32_DiskDrive
 
@@ -42,12 +41,9 @@ foreach ($server in $servers)
         $DiskSN=($disk | where Index -eq $diskN).SerialNumber
         
 		Write-Host $server "Changing write caching for" ($DiskName+" - SN:"+$DiskSN) "- DiskNumber:" $DiskN -f Yellow
-		Start-Process -FilePath "$env:TEMP\dskcache.exe" -ArgumentList "$($flag)w PhysicalDrive$($DiskN)" -WindowStyle Hidden
+		Start-Process -FilePath ".\..\..\..\Files\Utilities\dskcache.exe" -ArgumentList "$($flag)w PhysicalDrive$($DiskN)" -WindowStyle Hidden
        }}
 
-    # Wait 1s for utility execution and then remove dskcache.exe utility file from temporarily folder
-    Sleep 1
-    Remove-Item -Path "$env:TEMP\dskcache.exe"
 }
 
 Write-Host "Run duration: " -n

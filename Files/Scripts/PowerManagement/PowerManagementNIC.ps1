@@ -1,14 +1,14 @@
 # Custom Title
-$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.8.6 | Powershell Script"
+$host.ui.RawUI.WindowTitle =  "Optimize Next Gen v3.9.5 | Powershell Script"
 
 # Start log
-Start-Transcript -Path ("$env:TEMP\SettingsBackup\Logs\PowerManagementNIC.log") -Append | out-null
+Start-Transcript -Path "$env:TEMP\SettingsBackup\Logs\PowerManagementNIC.log" -Append | out-null
 
 $intNICid=0; do
 {
 	# Read network adapter properties
 	$objNICproperties = (Get-ItemProperty -Path ("HKLM:\SYSTEM\CurrentControlSet\Control\Class\{0}\{1}" -f "{4D36E972-E325-11CE-BFC1-08002BE10318}", ( "{0:D4}" -f $intNICid)) -ErrorAction SilentlyContinue)
-	
+
 	# Determine if the Network adapter index exists 
 	If ($objNICproperties)
 	{
@@ -29,15 +29,15 @@ $intNICid=0; do
 			
 			# Read Network properties
 			$objNetworkProperties = (Get-ItemProperty -Path ("HKLM:\SYSTEM\CurrentControlSet\Control\Network\{0}\{1}\Connection" -f "{4D36E972-E325-11CE-BFC1-08002BE10318}", $objNICproperties.NetCfgInstanceId) -ErrorAction SilentlyContinue)
-		    
+
 			# Inform user
 			Write-Host -n -f White "                ID     : "; Write-Host -f Yellow ("{0:D4}" -f $intNICid)
 			Write-Host -n -f White "                Network: "; Write-Host $objNetworkProperties.Name
             Write-Host -n -f White "                NIC    : "; Write-Host $strNICDisplayName
-			
+
 			# Report action
-			Write-Host -n -f White "                Actions: "; Write-Host -n -f Green ("- Power saving disabled")[4A[92C
-			
+			Write-Host -n -f White "                Actions: "; Write-Host -f Green ("- Power saving disabled")
+
 			#Disable power saving
             Set-ItemProperty -Path ("HKLM:\SYSTEM\CurrentControlSet\Control\Class\{0}\{1}" -f "{4D36E972-E325-11CE-BFC1-08002BE10318}", ( "{0:D4}" -f $intNICid)) -Name "PnPCapabilities" -Value "24" -Type DWord
 		}
