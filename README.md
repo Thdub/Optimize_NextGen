@@ -10,15 +10,13 @@ Everything is fully reversible, either from main script, or with backed up files
 
 You can apply FULL optimization, or single optimization/restoration tasks from the 2 main menus (Optimize/Restore)
 
-It will only work with build 17763 (or above), either Server 2019 or LTSC, but also works with other Windows 10 editions now. Note: I couldn't test services optimization for "regular" Windows 10 editions yet, so, for now, services configuration feature is disabled for these editions.
-
 You can use these switches :
+  /full (full script/interactive)   
+  /fast (fast mode)
+  /offline (same as fast mode but without restart prompt, for offline scenarios)
 
-    /full (full script/interactive)   
-    /fast (fast mode)
-    /offline (same as fast mode but without restart prompt, for offline scenarios)
+Download: https://github.com/Thdub/Optimize_NextGen/releases
 
-Links :
-   
-    Download: https://github.com/Thdub/Optimize_NextGen/releases
-    Infos: https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
+Infos: https://forums.mydigitallife.net/threads/optimize-nextgen.79419/
+
+Note : It will only work with build 17763 (or above), either Server 2019 or LTSC, but also works with other Windows 10 editions now. I couldn't test services optimization for "regular" Windows 10 editions yet, so, for now, services configuration feature is disabled for these editions.
