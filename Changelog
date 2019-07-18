@@ -147,3 +147,5 @@
 	- Fixed services optimization (services with strange characters or space), now it fully works.
 	- Fixed services startup configuration backup: mirror copy (robocopy /MIR) would delete precedent backups (change introduced in v.3.9.5)
 
+-18-07-2019 : Optimize NextGen v3.9.7
+	- Fixed File and Printer sharing (only Network Discovery was turned on when enabling File and Printer Sharing option)
