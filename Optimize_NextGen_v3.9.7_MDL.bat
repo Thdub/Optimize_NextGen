@@ -1480,9 +1480,9 @@ setlocal disableDelayedExpansion
 	echo [92mDone.[97m
 
 :: Disable "allow the computer to turn off this device to save power" for Network Adapters under PowerManagement tab in Device Manager
-	<nul set /p DummyName=[5CDisabling "Allow the computer to turn off this device to save power" for Network Adapters under Power Management tab in Device Manager: [1B[141D
+	echo [5CDisabling "Allow the computer to turn off this device to save power" for Network Adapters under Power Management tab in Device Manager...[?25l
 	%PScommand% -File "%Tmp_Folder%Files\Scripts\PowerManagement\PowerManagementNIC.ps1"
-	echo [?25l[5A[141C[92mDone.[97m[5B[141DPlease [93mreboot[97m the machine for the changes to take effect.[?25h
+	echo [5C[92mDone.[97m Please reboot the machine for the changes to take effect.[?25h
 	goto :eof
 
 ::============================================================================================================
