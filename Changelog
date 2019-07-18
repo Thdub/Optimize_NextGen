@@ -149,6 +149,6 @@
 
 -18-07-2019 : Optimize NextGen v3.9.7
 	- Fixed File and Printer sharing option: only Network Discovery was turned ON when enabling File and Printer Sharing option in services optimization.
-	- Fixed some syntax
-	- Updated User Policy file with (forgotten) Office telemetry settings
+	- Improved syntax: added some double quotes, always better/safer.
+	- Updated User Policy file with (forgotten) Office telemetry settings.
 
