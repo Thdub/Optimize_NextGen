@@ -85,9 +85,8 @@
 	-Minor cosmetic changes
 
 -08-06-2019 : Optimize NextGen v3.8
-	- Added DeviceCleanup cmdline tool:
-	  https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
-       	  Each once attached device leaves an entry in the Windows device management. 
+	- Added DeviceCleanup cmdline tool: https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
+    Each once attached device leaves an entry in the Windows device management. 
 	  By means of the Windows device manager you can delete one by one only. 
 	  With this tool you can delete multiple or all non-present devices.
 
@@ -120,7 +119,7 @@
 	- Added more privacy settings (Thanks to some fellow MDL members and Blackbird dev)
 	- New services startup configuration backup: Using now a customized vbs script which will save startup configuration as .bat and .reg file
 	  .reg file provides delayed start detection, and on top of that backup task is (a lot) faster. 
-	  (Thanks to Ramesh Srinivasan for tbe original script)
+	  (Thanks to Ramesh Srinivasan for the original script)
 	- Setting indexing options is also faster, and custom path indexing made - I hope - bulletproof (if you hit cancel or enter path twice for ex.)
 	- Keyboard improvments: Keyboard speed (enjoy fast keyboard!), and numlock set ON at startup (never understood why it wasn't the case by default)
 	- Added clear event viewer log option.
@@ -132,14 +131,14 @@
 	  Haven't had time yet to update "Restore Tweaks" script, it's a bit long, sorry.
 	  Neither had to update "remove registry tweaks" part in the main script.
 	  But few are missing, since most of the settings are set by GPO.
-	- TRIM command will only run if system drive is detected as a SSD 
+	- TRIM command will only run if system drive is detected as a SSD.
 	  In previous version it would not do anything anyway if choose to run TRIM command while system drive isn't a SSD.
-    	  Added command makes the script a bit slower, but didn't seem logical to propose this option for users with HDD.
+    Added command makes the script a bit slower, but didn't seem logical to propose this option for users with HDD.
 	- Added info in Services configuration/File and Printer Sharing Enable/Disable choice ( Press D if you don't have home network and/or don't use network printer).
 	- Added infos about defaults settings in Fast Mode. 
 	  Note that in fast mode settings are geared towards maximum performances.
 	- Small edits in backed up powershell scripts : Log path has been changed to script folder.
  	  Note: These are the scripts provided in backup folder if you want to launch the tasks outside main script.
-	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer)
+	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer).
 	- Some small cosmetic changes cursor/colors etc...
-	- Small bug fixes (found quite a lot of glitches, but happily all harmless...)
+	- Small bug fixes (found quite a few glitches, but happily all harmless...)
