@@ -268,6 +268,16 @@ NewTabPageShow
 DWORD:0
 
 User
+Software\Policies\Microsoft\office\16.0\common
+sendcustomerdata
+DWORD:0
+
+User
+Software\Policies\Microsoft\office\16.0\common
+qmenable
+DWORD:0
+
+User
 Software\Policies\Microsoft\office\16.0\osm
 enablelogging
 DWORD:0
@@ -351,6 +361,11 @@ User
 Software\Policies\Microsoft\office\16.0\osm\preventedsolutiontypes
 agave
 DWORD:1
+
+User
+Software\Policies\Microsoft\office\common\clienttelemetry
+sendtelemetry
+DWORD:3
 
 User
 Software\Policies\Microsoft\Windows\CloudContent
