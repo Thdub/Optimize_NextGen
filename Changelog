@@ -142,3 +142,7 @@
 	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer).
 	- Some small cosmetic changes cursor/colors etc...
 	- Small bug fixes (found quite a few glitches, but happily all harmless...)
+
+-18-07-2019 : Optimize NextGen v3.9.6
+	-Fixed services optimization (services with strange characters or space)
+	-Fixed services startup configuration backup: mirror copy (robocopy /MIR) would delete precedent backups (change introduced in v.3.9.5)
