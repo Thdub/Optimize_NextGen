@@ -140,7 +140,7 @@
 	- Small edits in backed up powershell scripts: Log path changed to script folder.
  	  Note: These are the scripts provided in backup folder if you want to launch the tasks outside main script.
 	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer).
-	- Some small cosmetic changes cursor/colors etc...
+	- Some small cosmetic changes, cursor/colors etc...
 	- Small bug fixes (found quite a few glitches, but happily all harmless...)
 
 -18-07-2019 : Optimize NextGen v3.9.6
