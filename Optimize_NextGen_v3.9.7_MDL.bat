@@ -859,88 +859,88 @@ setlocal disableDelayedExpansion
 	schtasks /Change /TN "Microsoft\Office\OfficeTelemetryAgentLogOn2016" /Disable >nul 2>&1
 	echo [92mDone.[97m
 	<nul set /p DummyName=[2C-Office Registry: 
-	reg add HKCU\Software\Microsoft\Office\Common\ClientTelemetry /v DisableTelemetry /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common /v sendcustomerdata /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common\Feedback /v enabled /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common\Feedback /v includescreenshot /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Outlook\Options\Mail /v EnableLogging /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Word\Options /v EnableLogging /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\Common\ClientTelemetry /v SendTelemetry /t REG_DWORD /d 3 /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common /v qmenable /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common /v updatereliabilitydata /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common\General /v shownfirstrunoptin /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common\General /v skydrivesigninoption /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Common\ptwatson /v ptwoptin /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\Firstrun /v disablemovie /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM /v Enablelogging /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM /v EnableUpload /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM /v EnableFileObfuscation /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v accesssolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v olksolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v onenotesolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v pptsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v projectsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v publishersolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v visiosolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v wdsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications /v xlsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v agave /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v appaddins /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v comaddins /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v documentfiles /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v templatefiles /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\Common\ClientTelemetry" /v "DisableTelemetry" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common" /v "sendcustomerdata" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common\Feedback" /v "enabled" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common\Feedback" /v "includescreenshot" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Outlook\Options\Mail" /v "EnableLogging" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Word\Options" /v "EnableLogging" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\Common\ClientTelemetry" /v "SendTelemetry" /t REG_DWORD /d "3" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common" /v "qmenable" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common" /v "updatereliabilitydata" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common\General" /v "shownfirstrunoptin" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common\General" /v "skydrivesigninoption" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Common\ptwatson" /v "ptwoptin" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\Firstrun" /v "disablemovie" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM" /v "Enablelogging" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM" /v "EnableUpload" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM" /v "EnableFileObfuscation" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "accesssolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "olksolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "onenotesolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "pptsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "projectsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "publishersolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "visiosolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "wdsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedapplications" /v "xlsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "agave" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "appaddins" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "comaddins" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "documentfiles" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "templatefiles" /t REG_DWORD /d "1" /f >nul 2>&1
 	echo [92mDone.[97m
 	<nul set /p DummyName=[2C-Office Policies: 
-	reg add HKCU\Software\Policies\Microsoft\Office\Common\clienttelemetry /v sendtelemetry /t REG_DWORD /d 3 /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Common /v qmenable /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Common /v sendcustomerdata /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Common /v updatereliabilitydata /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Common\General /v shownfirstrunoptin /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Common\General /v skydrivesigninoption /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Common\ptwatson /v ptwoptin /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\Firstrun /v disablemovie /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM /v Enablelogging /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM /v EnableUpload /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM /v EnableFileObfuscation /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v accesssolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v olksolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v onenotesolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v pptsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v projectsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v publishersolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v visiosolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v wdsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v xlsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v agave /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v appaddins /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v comaddins /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v documentfiles /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v templatefiles /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\Software\Policies\Microsoft\Office\Common\clienttelemetry /v sendtelemetry /t REG_DWORD /d 3 /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common /v qmenable /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\Software\Policies\Microsoft\Office\16.0\Common /v sendcustomerdata /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common /v updatereliabilitydata /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\General /v shownfirstrunoptin /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\General /v skydrivesigninoption /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\ptwatson /v ptwoptin /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Firstrun /v disablemovie /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM /v Enablelogging /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM /v EnableUpload /t REG_DWORD /d "0" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM /v EnableFileObfuscation /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v accesssolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v olksolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v onenotesolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v pptsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v projectsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v publishersolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v visiosolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v wdsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications /v xlsolution /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v agave /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v appaddins /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v comaddins /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v documentfiles /t REG_DWORD /d "1" /f >nul 2>&1
-	reg add HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes /v templatefiles /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\Common\clienttelemetry" /v "sendtelemetry" /t REG_DWORD /d "3" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common" /v "qmenable" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common" /v "sendcustomerdata" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common" /v "updatereliabilitydata" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common\General" /v "shownfirstrunoptin" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common\General" /v "skydrivesigninoption" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common\ptwatson" /v "ptwoptin" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Firstrun" /v "disablemovie" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM" /v "Enablelogging" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM" /v "EnableUpload" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM" /v "EnableFileObfuscation" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "accesssolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "olksolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "onenotesolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "pptsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "projectsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "publishersolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "visiosolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "wdsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "xlsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "agave" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "appaddins" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "comaddins" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "documentfiles" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKCU\Software\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "templatefiles" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Office\Common\clienttelemetry" /v "sendtelemetry" /t REG_DWORD /d "3" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common" /v "qmenable" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\Software\Policies\Microsoft\Office\16.0\Common" /v "sendcustomerdata" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common" /v "updatereliabilitydata" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\General" /v "shownfirstrunoptin" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\General" /v "skydrivesigninoption" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\ptwatson" /v "ptwoptin" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Firstrun" /v "disablemovie" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM" /v "Enablelogging" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM" /v "EnableUpload" /t REG_DWORD /d "0" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM" /v "EnableFileObfuscation" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "accesssolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "olksolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "onenotesolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "pptsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "projectsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "publishersolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "visiosolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "wdsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedapplications" /v "xlsolution" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "agave" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "appaddins" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "comaddins" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "documentfiles" /t REG_DWORD /d "1" /f >nul 2>&1
+	reg add "HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\OSM\preventedsolutiontypes" /v "templatefiles" /t REG_DWORD /d "1" /f >nul 2>&1
 	echo [92mDone.[97m
 	echo [93mTelemetry blocking task has completed successfully.[97m& echo:
 	goto :eof
@@ -1773,30 +1773,30 @@ goto :Start_Svc_Optimization
 	for %%g in (%AUTO%) do (
 		set "AUTO_Svc=%%g" 
 		set "AUTO_Svc=!AUTO_Svc:$= !"
-		reg query "HKLM\SYSTEM\ControlSet001\Services\!AUTO_Svc!" /v Start 1>nul 2>nul && reg add "HKLM\SYSTEM\ControlSet001\Services\!AUTO_Svc!" /v Start /t REG_DWORD /d 2 /f >nul 2>&1
+		reg query "HKLM\SYSTEM\ControlSet001\Services\!AUTO_Svc!" /v Start 1>nul 2>nul && reg add "HKLM\SYSTEM\ControlSet001\Services\!AUTO_Svc!" /v "Start" /t REG_DWORD /d "2" /f >nul 2>&1
 		sc config "!AUTO_Svc!" start= AUTO >nul 2>&1
 	)
 
 	for %%g in (%DEMAND%) do (
 		set "DEMAND_Svc=%%g"
 		set "DEMAND_Svc=!DEMAND_Svc:$= !"
-		reg query "HKLM\SYSTEM\ControlSet001\Services\!DEMAND_Svc!" /v Start 1>nul 2>nul && reg add "HKLM\SYSTEM\ControlSet001\Services\!DEMAND_Svc!" /v Start /t REG_DWORD /d 3 /f >nul 2>&1
+		reg query "HKLM\SYSTEM\ControlSet001\Services\!DEMAND_Svc!" /v Start 1>nul 2>nul && reg add "HKLM\SYSTEM\ControlSet001\Services\!DEMAND_Svc!" /v "Start" /t REG_DWORD /d "3" /f >nul 2>&1
 		sc config "!DEMAND_Svc!" start= DEMAND >nul 2>&1
 	)	
 
 	for %%g in (%DISABLED%) do (
 		set "DISABLED_Svc=%%g"
 		set "DISABLED_Svc=!DISABLED_Svc:$= !"
-		reg query "HKLM\SYSTEM\ControlSet001\Services\!DISABLED_Svc!" /v Start 1>nul 2>nul && reg add "HKLM\SYSTEM\ControlSet001\Services\!DISABLED_Svc!" /v Start /t REG_DWORD /d 4 /f >nul 2>&1
+		reg query "HKLM\SYSTEM\ControlSet001\Services\!DISABLED_Svc!" /v Start 1>nul 2>nul && reg add "HKLM\SYSTEM\ControlSet001\Services\!DISABLED_Svc!" /v "Start" /t REG_DWORD /d "4" /f >nul 2>&1
 		sc config "!DISABLED_Svc!" start= DISABLED >nul 2>&1
 	)
 
 :: Wlan option
 	if "%WLan_Service%" == "Missing" ( goto :Services_Optimization_Success )
 	if "%WLan_Service%" == "Enabled" (
-		reg add "HKLM\SYSTEM\ControlSet001\Services\WlanSvc" /v Start /t REG_DWORD /d 2 /f >nul 2>&1
+		reg add "HKLM\SYSTEM\ControlSet001\Services\WlanSvc" /v "Start" /t REG_DWORD /d "2" /f >nul 2>&1
 		sc config "WlanSvc" start= AUTO >nul 2>&1 ) else (
-			reg add "HKLM\SYSTEM\ControlSet001\Services\WlanSvc" /v Start /t REG_DWORD /d 4 /f >nul 2>&1
+			reg add "HKLM\SYSTEM\ControlSet001\Services\WlanSvc" /v "Start" /t REG_DWORD /d "4" /f >nul 2>&1
 			sc config "WlanSvc" start= DISABLED >nul 2>&1 )
 
 :Services_Optimization_Success
