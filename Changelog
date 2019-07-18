@@ -116,12 +116,12 @@
 	  Note: if you set this option, you will then see an (harmless) error in event viewer log:
 	  Error setting traits on Provider {8444a4fb-d8d3-4f38-84f8-89960a1ef12f}, haven't found better solution for now.
 	  Note2: If you previously chose to bypass games settings, this option is not proposed.
-	- Added more privacy settings (Thanks to some fellow MDL members and Blackbird dev)
-	- New services startup configuration backup: Using now a customized vbs script which will save startup configuration as .bat and .reg file
+	- Added more privacy settings (Thanks to some fellow MDL members and Blackbird dev).
+	- New services startup configuration backup: Using now a customized vbs script which will save startup configuration as .bat and .reg file.
 	  .reg file provides delayed start detection, and on top of that backup task is (a lot) faster. 
 	  (Thanks to Ramesh Srinivasan for the original script)
-	- Setting indexing options is also faster, and custom path indexing made - I hope - bulletproof (if you hit cancel or enter path twice for ex.)
-	- Keyboard improvments: Keyboard speed (enjoy fast keyboard!), and numlock set ON at startup (never understood why it wasn't the case by default)
+	- Setting indexing options is also faster, and custom path indexing made - I hope - bulletproof (if you hit cancel or enter path twice for example).
+	- Keyboard improvments: Keyboard speed (enjoy fast keyboard!), and numlock set ON at startup (never understood why it wasn't the case by default).
 	- Added clear event viewer log option.
 	- Firefox Policy Template updated to v1.8 (Thanks to Michael Kaply)
 	  https://github.com/mozilla/policy-templates/releases
