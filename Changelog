@@ -1,104 +1,11 @@
--22-12-2018 : Initial release
+-18-07-2019 : Optimize NextGen v3.9.7
+	- Fixed File and Printer sharing option: only Network Discovery was turned ON when enabling File and Printer Sharing option in services optimization.
+	- Improved syntax: added some double quotes, always better/safer.
+	- Updated User Policy file with (forgotten) Office telemetry settings.
 
--24-12-2018 : Minor code changes, mostly the NSudo existence/path query (also case insensitive now) for complete services optimization.
-
--17-01-2019 : Optimize Next Gen v2, complete re-write.
-	- Now includes a Main Menu to apply full optimization or only parts of the script (cf spoiler screenshot in MDL forum thread).
-	- Merged Server and LTSC in one unique .bat: Windows edition is detected inside the script.
-	- Added Power Management Settings in "Performances settings task".
-	- Services backup is now (much) faster.
-	- Included NSudo to apply complete services optimization.
-	- Added Trim (as an Option), only for system drive. Note: if your C:\ drive isn't a SSD, command will not proceed. So, don't worry if you pressed yes by mistake, it won't run HDD defrag...
-	- Firefox Policies and Template are now optional (requested by PsychedelicShaman ).
-	- Background apps, Camera and Microphone are now set to "User is in control" in Group Policy (thanks to PsychedelicShaman ).
-	- Few registry tweaks added (like Shutdown Event Tracer and DisableCAD for Server).
-	- Resetting Group Policy Security Settings is now optional. Note: if you choose to reset, don't worry, Group Policy Security Settings and Security database are also saved (cf spoiler notes).
-	- Added few security settings (rights delegation and password policy). 
-	  Note : Strong password policy is ON by default on Windows Server, not verified yet in LTSC.
-	- Backup folder with settings and scripts is now saved in script folder (instead of Desktop).
-	- Rewrote all included scripts, and added some more. Note: "Restore Group Policy from backup" and "Optimize Group Policy" scripts obviously requires to keep the same folder structure.
-	- Added nice colors and title to tittle bar (cf screenshot). ANSI Escape sequences (supported since Threshold 2 Update) was fun in the beginning, but rapidely ended up a nightmare to have it set perfect in script...
-	  Check MSDN page for reference abour cursor position and colors:
-	  https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences 
-	- Added Powershell command to resize batch window without resizing buffer height.
-	- Added Ultimate Performance PowerScheme setting in Power Management, to set it/or create Powerscheme if missing (and restore default GUID). 
-	  There is a annoying bug in windows, if you ever change Powerscheme through powercfg /S command, Ultimate Performance PowerScheme vanishes. 
-	  You can easily recreate it with this command: powercfg -duplicatescheme 9a42b02-d5df-448d-aa00-03f14749eb61, but it then creates a new GUID in registry...
-	  Too ugly! Had to fix that...You'll have Ultimate Performance Powerschem WITH default/original GUID in registry.
-
--21-01-2019 : Optimize Next Gen v2.5
-	- New Fast option: Full optimization with no prompts nor backups. 
-	  Similar to Optimize NextGen v.1 but with the added new functions.
-	  Note: TRIM is excluded from fast optimization (you don't need to trim that often).
-	- New Separate Options in the Main Menu : Telemetry only, Privacy only, TRIM (cf main menu screenshot)
-	- Added HID selective suspend setting, to disable/untick "Allow the computer to turn off this device to save power" for HID Devices under Power Management tab in Device Manager:
-	- Added Memory Compression and PageCombining, only for Windows Server (cf spoiler screenshots).
-	- Fixed a missing double quote. Not that important, it was just making one of the restore functions exit at the end of the process, instead of pause/going to start menu.
-
--16-02-2019: Optimize NextGen v2.6
-	- Added few "privacy" Group Policy settings
-	- Fixed bug introduced in v2.5 while running TRIM command (forgot to "escape" parenthesis in the script)
-
--16-04-2019: Optimize NextGen v3.0
-	- Compatibility with other Windows 10 editions (services optimization feature not available yet)
-	- Separate Restore and Optimize menus
-	- New feature: Enable write caching on all disks. Normally one needs to do it manually in device manager for each drive.
-	- Now ask if the user wants to enable or disable file and printer sharing required services (disabled by default in Fast mode).
-	- At the beginning scans if Wlan Service exists, and then if any Wifi is connected, to disable (or ask to disable) Wlan service during later services optimization.
-	- New "custom policy set", with 2 new policies: Enable or disable storage sense, Remove power button from login screen (hide or force allow/show, which I needed personally)
-	- Some Group Policy settings added
-
-
--20-05-2019: Optimize NextGen v3.5
-	- Compressed everything in one simple SFX file ("auto extract" .exe), easier to store.
-	- Now accepting switches. 
-	  Switches added: /fast /full /secret
-	    /fast=fast mode (no backup or choices)
-	    /full=full mode (every optimization with choices)
-	    /secret=fast mode with hidden console, except restart countdown and prompt at the end.	
-	  Note: If you prefer to run .bat instead, just open/extract .exe with 7zip or winrar. 
-	  .bat script also accepts switches, same functionalities, with just a cosmetic difference: shell/console "changes" are apparent.
-
-	- Added a script to quickly create .exe shortcuts with all switches.
-	- Added (and modified a bit) Indexing options setting, cf here: https://github.com/Thdub/Set_Indexing_Options
-
--05-06-2019: Optimize NextGen v3.6
-	- Firefox Template updated to v1.7, changelog here: https://github.com/mozilla/policy-templates/releases
-	  .adml (policy definitions) are now available in different languages (de, en, es, it, sp) and will be imported according to your OS language.
-	- Removed some Firefox policies (locked values) and few personal settings I had forgotten to remove, like https://google.com/ncr Home Page.
-	- Added /offline switch for offline scenarios: deployment/post-install script, logon/logoff script...
-	  Usage: Optimize_NextGen_MDL.exe /offline, or Optimize_NextGen_MDL.bat /offline (if you extracted .bat from SFX archive).
-	  You can also use the shortcuts creation script provided, for easier launch.
-	- Small fixes:
-	  - In Miscellaneous section, UI and keyboard was set to EN-US with French Layout (my own settings, sorry...in a 2000+lines scripts it's hard to think of everything)
-	  - Deleted the whole keyboard part for now, including NUMLOCK at startup ("InitialKeyboardIndicators"= 2), "KeyboardDelay" and "KeyboardSpeed"
-	  - One robocopy command wasn't hidden ( >nul missing)
-	  - Added User Name to "user accounts to be trusted for delegation" (security settings). Just a precaution, Authenticated Users and Administrator already had delegation rights (in previous script versions). Note: This setting is mandatory on Windows Server if you want to be able to change/update User Policy, you need at least Authenticated User or Administrator (without s).
-
--08-06-2019 : Optimize NextGen v3.7
-	- Modified Microsoft account policy (security setting) to: "Users can't add Microsoft accounts", to avoid people using microsoft account being 
-	locked out.
-	- Added option to set Group Policy again or to reset Group Policy after registry tweak removing (Restore menu):
-	  Some important registry settings are redundantly included as Group Policy settings. If you launched full/fast optimization or Group Policy single task before, the tweaks you just removed are still stored as GPO, which means that while tweaks were removed, a future "GpUpdate" command would re-add them.
-	  In this case (only), it's better to launch Group Policy task again with these only the registry tweaks removed, or to reset Group Policy totally. 
-	  So, I made 4 new policy files without those registry settings and added option to set again, reset Group Policy totally, or leave like this.
-	-Minor cosmetic changes
-
--08-06-2019 : Optimize NextGen v3.8
-	- Added DeviceCleanup cmdline tool: https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
-    Each once attached device leaves an entry in the Windows device management. 
-	  By means of the Windows device manager you can delete one by one only. 
-	  With this tool you can delete multiple or all non-present devices.
-
--11-06-2019 : Optimize NextGen v3.8.2
-	- Added event viewer logs clearing to end cleaning task.
-
--07-07-2019 : Optimize NextGen v3.8.5
-	- Added more privacy settings (in miscellaneous section for now). 
- 	
--08-07-2019 : Optimize NextGen v3.8.6
- 	- Cleared duplicates/redundant settings
-	- Updated "Disable scheduled tasks" (a lot where added).
+-18-07-2019 : Optimize NextGen v3.9.6
+	- Fixed services optimization (services with strange characters or space), now it fully works.
+	- Fixed services startup configuration backup: mirror copy (robocopy /MIR) would delete precedent backups (change introduced in v.3.9.5)
 
 -17-07-2019 : Optimize NextGen v3.9.5
 	- Major code improvment (learning every day...)
@@ -142,13 +49,102 @@
 	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer).
 	- Some small cosmetic changes, cursor/colors etc...
 	- Small bug fixes (found quite a few glitches, but happily all harmless...)
+-08-07-2019 : Optimize NextGen v3.8.6
+ 	- Cleared duplicates/redundant settings
+	- Updated "Disable scheduled tasks" (a lot where added).
 
--18-07-2019 : Optimize NextGen v3.9.6
-	- Fixed services optimization (services with strange characters or space), now it fully works.
-	- Fixed services startup configuration backup: mirror copy (robocopy /MIR) would delete precedent backups (change introduced in v.3.9.5)
+-07-07-2019 : Optimize NextGen v3.8.5
+	- Added more privacy settings (in miscellaneous section for now). 
+ 
+-11-06-2019 : Optimize NextGen v3.8.2
+	- Added event viewer logs clearing to end cleaning task.
 
--18-07-2019 : Optimize NextGen v3.9.7
-	- Fixed File and Printer sharing option: only Network Discovery was turned ON when enabling File and Printer Sharing option in services optimization.
-	- Improved syntax: added some double quotes, always better/safer.
-	- Updated User Policy file with (forgotten) Office telemetry settings.
+-08-06-2019 : Optimize NextGen v3.8
+	- Added DeviceCleanup cmdline tool: https://www.uwe-sieber.de/misc_tools_e.html#devicecleanup
+    	  Each once attached device leaves an entry in the Windows device management. 
+	  By means of the Windows device manager you can delete one by one only. 
+	  With this tool you can delete multiple or all non-present devices.
 
+-08-06-2019 : Optimize NextGen v3.7
+	- Modified Microsoft account policy (security setting) to: "Users can't add Microsoft accounts", to avoid people using microsoft account being 
+	locked out.
+	- Added option to set Group Policy again or to reset Group Policy after registry tweak removing (Restore menu):
+	  Some important registry settings are redundantly included as Group Policy settings. If you launched full/fast optimization or Group Policy single task before, the tweaks you just removed are still stored as GPO, which means that while tweaks were removed, a future "GpUpdate" command would re-add them.
+	  In this case (only), it's better to launch Group Policy task again with these only the registry tweaks removed, or to reset Group Policy totally. 
+	  So, I made 4 new policy files without those registry settings and added option to set again, reset Group Policy totally, or leave like this.
+	-Minor cosmetic changes
+
+-05-06-2019: Optimize NextGen v3.6
+	- Firefox Template updated to v1.7, changelog here: https://github.com/mozilla/policy-templates/releases
+	  .adml (policy definitions) are now available in different languages (de, en, es, it, sp) and will be imported according to your OS language.
+	- Removed some Firefox policies (locked values) and few personal settings I had forgotten to remove, like https://google.com/ncr Home Page.
+	- Added /offline switch for offline scenarios: deployment/post-install script, logon/logoff script...
+	  Usage: Optimize_NextGen_MDL.exe /offline, or Optimize_NextGen_MDL.bat /offline (if you extracted .bat from SFX archive).
+	  You can also use the shortcuts creation script provided, for easier launch.
+	- Small fixes:
+	  - In Miscellaneous section, UI and keyboard was set to EN-US with French Layout (my own settings, sorry...in a 2000+lines scripts it's hard to think of everything)
+	  - Deleted the whole keyboard part for now, including NUMLOCK at startup ("InitialKeyboardIndicators"= 2), "KeyboardDelay" and "KeyboardSpeed"
+	  - One robocopy command wasn't hidden ( >nul missing)
+	  - Added User Name to "user accounts to be trusted for delegation" (security settings). Just a precaution, Authenticated Users and Administrator already had delegation rights (in previous script versions). Note: This setting is mandatory on Windows Server if you want to be able to change/update User Policy, you need at least Authenticated User or Administrator (without s).
+
+-20-05-2019: Optimize NextGen v3.5
+	- Compressed everything in one simple SFX file ("auto extract" .exe), easier to store.
+	- Now accepting switches. 
+	  Switches added: /fast /full /secret
+	    /fast=fast mode (no backup or choices)
+	    /full=full mode (every optimization with choices)
+	    /secret=fast mode with hidden console, except restart countdown and prompt at the end.	
+	  Note: If you prefer to run .bat instead, just open/extract .exe with 7zip or winrar. 
+	  .bat script also accepts switches, same functionalities, with just a cosmetic difference: shell/console "changes" are apparent.
+
+	- Added a script to quickly create .exe shortcuts with all switches.
+	- Added (and modified a bit) Indexing options setting, cf here: https://github.com/Thdub/Set_Indexing_Options
+
+-16-04-2019: Optimize NextGen v3.0
+	- Compatibility with other Windows 10 editions (services optimization feature not available yet)
+	- Separate Restore and Optimize menus
+	- New feature: Enable write caching on all disks. Normally one needs to do it manually in device manager for each drive.
+	- Now ask if the user wants to enable or disable file and printer sharing required services (disabled by default in Fast mode).
+	- At the beginning scans if Wlan Service exists, and then if any Wifi is connected, to disable (or ask to disable) Wlan service during later services optimization.
+	- New "custom policy set", with 2 new policies: Enable or disable storage sense, Remove power button from login screen (hide or force allow/show, which I needed personally)
+	- Some Group Policy settings added
+-16-02-2019: Optimize NextGen v2.6
+	- Added few "privacy" Group Policy settings
+	- Fixed bug introduced in v2.5 while running TRIM command (forgot to "escape" parenthesis in the script)
+
+-21-01-2019 : Optimize Next Gen v2.5
+	- New Fast option: Full optimization with no prompts nor backups. 
+	  Similar to Optimize NextGen v.1 but with the added new functions.
+	  Note: TRIM is excluded from fast optimization (you don't need to trim that often).
+	- New Separate Options in the Main Menu : Telemetry only, Privacy only, TRIM (cf main menu screenshot)
+	- Added HID selective suspend setting, to disable/untick "Allow the computer to turn off this device to save power" for HID Devices under Power Management tab in Device Manager:
+	- Added Memory Compression and PageCombining, only for Windows Server (cf spoiler screenshots).
+	- Fixed a missing double quote. Not that important, it was just making one of the restore functions exit at the end of the process, instead of pause/going to start menu.
+
+-17-01-2019 : Optimize Next Gen v2, complete re-write.
+	- Now includes a Main Menu to apply full optimization or only parts of the script (cf spoiler screenshot in MDL forum thread).
+	- Merged Server and LTSC in one unique .bat: Windows edition is detected inside the script.
+	- Added Power Management Settings in "Performances settings task".
+	- Services backup is now (much) faster.
+	- Included NSudo to apply complete services optimization.
+	- Added Trim (as an Option), only for system drive. Note: if your C:\ drive isn't a SSD, command will not proceed. So, don't worry if you pressed yes by mistake, it won't run HDD defrag...
+	- Firefox Policies and Template are now optional (requested by PsychedelicShaman ).
+	- Background apps, Camera and Microphone are now set to "User is in control" in Group Policy (thanks to PsychedelicShaman ).
+	- Few registry tweaks added (like Shutdown Event Tracer and DisableCAD for Server).
+	- Resetting Group Policy Security Settings is now optional. Note: if you choose to reset, don't worry, Group Policy Security Settings and Security database are also saved (cf spoiler notes).
+	- Added few security settings (rights delegation and password policy). 
+	  Note : Strong password policy is ON by default on Windows Server, not verified yet in LTSC.
+	- Backup folder with settings and scripts is now saved in script folder (instead of Desktop).
+	- Rewrote all included scripts, and added some more. Note: "Restore Group Policy from backup" and "Optimize Group Policy" scripts obviously requires to keep the same folder structure.
+	- Added nice colors and title to tittle bar (cf screenshot). ANSI Escape sequences (supported since Threshold 2 Update) was fun in the beginning, but rapidely ended up a nightmare to have it set perfect in script...
+	  Check MSDN page for reference abour cursor position and colors:
+	  https://docs.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences 
+	- Added Powershell command to resize batch window without resizing buffer height.
+	- Added Ultimate Performance PowerScheme setting in Power Management, to set it/or create Powerscheme if missing (and restore default GUID). 
+	  There is a annoying bug in windows, if you ever change Powerscheme through powercfg /S command, Ultimate Performance PowerScheme vanishes. 
+	  You can easily recreate it with this command: powercfg -duplicatescheme 9a42b02-d5df-448d-aa00-03f14749eb61, but it then creates a new GUID in registry...
+	  Too ugly! Had to fix that...You'll have Ultimate Performance Powerschem WITH default/original GUID in registry.
+
+-24-12-2018 : Minor code changes, mostly the NSudo existence/path query (also case insensitive now) for complete services optimization.
+
+-22-12-2018 : Initial release
