@@ -49,6 +49,7 @@
 	- Added Launcher for Write Caching script, because it needs to be launched with arguments (for drives and computer).
 	- Some small cosmetic changes, cursor/colors etc...
 	- Small bug fixes (found quite a few glitches, but happily all harmless...)
+
 -08-07-2019 : Optimize NextGen v3.8.6
  	- Cleared duplicates/redundant settings
 	- Updated "Disable scheduled tasks" (a lot where added).
