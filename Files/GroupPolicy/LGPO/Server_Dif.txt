@@ -1,0 +1,27 @@
+; ----------------------------------------------------------------------
+; PARSING Computer POLICY
+; Source file:  Machine\Registry.pol
+
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+DisableCAD
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows NT\CurrentVersion\MYS
+DisableShowAtLogon
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows NT\Reliability
+ShutdownReasonOn
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows NT\Reliability
+ShutdownReasonUI
+DELETE
+
+; PARSING COMPLETED.
+; ----------------------------------------------------------------------
+

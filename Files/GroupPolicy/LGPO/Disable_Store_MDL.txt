@@ -1,0 +1,42 @@
+; ----------------------------------------------------------------------
+; PARSING Computer POLICY
+; Source file:  Machine\Registry.pol
+
+Computer
+Software\Microsoft\Windows\CurrentVersion\Policies\System
+NoConnectedUser
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\MicrosoftAccount
+DisableUserAuth
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\Explorer
+NoUseStoreOpenWith
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\WindowsStore
+AutoDownload
+DWORD:2
+
+Computer
+Software\Policies\Microsoft\WindowsStore
+DisableStoreApps
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\WindowsStore
+RemoveWindowsStore
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\WindowsStore
+RequirePrivateStoreOnly
+DWORD:1
+
+; PARSING COMPLETED.
+; ----------------------------------------------------------------------
+
