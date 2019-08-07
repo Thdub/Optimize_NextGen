@@ -208,5 +208,5 @@ if "%mode_switch%"=="/offline" ( goto :Set_Arguments )
 
 :: Delete PS script
 	del %ShortcutScriptPath% /f /s /q >nul 2>&1
-	timeout /t 30 >nul 2>&1
+	timeout /t 5 >nul 2>&1
 	exit /b
