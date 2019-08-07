@@ -63,37 +63,37 @@ setlocal enabledelayedexpansion
 :gp_sw
 	choice /c YN /M "Run Group Policy task"
 	if errorlevel 2 ( set "gp_switch=-nogp" & goto :priv_sw )
-	if errorlevel 1 ( set "gp_switch=" & goto :resetgp_sw )
+	if errorlevel 1 ( set "gp_switch=-gp" & goto :resetgp_sw )
 :resetgp_sw
 	choice /c YN /M "-Reset group policy security settings"
 	if errorlevel 2 ( set "gps_switch=-noresetgps" & goto :custompol_sw )
-	if errorlevel 1 ( set "gps_switch=" & goto :custompol_sw )
+	if errorlevel 1 ( set "gps_switch=-resetgps" & goto :custompol_sw )
 :custompol_sw
 	choice /c YN /M "-Import Custom Policy Template"
 	if errorlevel 2 ( set "importcp_switch=-noimportcp" & goto :importfp_sw )
-	if errorlevel 1 ( set "importcp_switch=" & goto :importfp_sw )
+	if errorlevel 1 ( set "importcp_switch=-importcp" & goto :importfp_sw )
 :importfp_sw
 	choice /c YN /M "-Import Firefox Policy Template and Group Policy settings"
 	if errorlevel 2 ( set "importfp_switch=-noimportfp" & goto :priv_sw )
-	if errorlevel 1 ( set "importfp_switch=" & goto :priv_sw )
+	if errorlevel 1 ( set "importfp_switch=-importfp" & goto :priv_sw )
 :: Privacy
 :priv_sw
 	choice /c YN /M "Run Privacy task"
 	if errorlevel 2 ( set "priv_switch=-nopriv" & goto :perf_sw )
-	if errorlevel 1 ( set "priv_switch=" & goto :perf_sw )
+	if errorlevel 1 ( set "priv_switch=-priv" & goto :perf_sw )
 :: Performances
 :perf_sw
 	choice /c YN /M "Run Performance task"
 	if errorlevel 2 ( set "perf_switch=-noperf" & goto :store_sw )
-	if errorlevel 1 ( set "perf_switch=" & goto :ss_sw )
+	if errorlevel 1 ( set "perf_switch=-perf" & goto :ss_sw )
 :ss_sw
 	choice /c YN /M "-Deactivate Selective Suspend for USB devices and Network adapters"
 	if errorlevel 2 ( set "ss_switch=-noss" & goto :wc_sw )
-	if errorlevel 1 ( set "ss_switch=" & goto :wc_sw )
+	if errorlevel 1 ( set "ss_switch=-ss" & goto :wc_sw )
 :wc_sw
 	choice /c YN /M "-Enable Write Caching on all disks"
 	if errorlevel 2 ( set "wc_switch=-nowc" & goto :mm_sw )
-	if errorlevel 1 ( set "wc_switch=" & goto :mm_sw )
+	if errorlevel 1 ( set "wc_switch=-wc" & goto :mm_sw )
 :mm_sw
 	for /f "tokens=1* delims==" %%A in ('wmic os get Caption /value') do ( for /f "tokens=*" %%S in ("%%B") do ( if "%%A"=="Caption" set "OS_Name=%%S" ))
 	if "%OS_Name%"=="Microsoft Windows Server 2019 Datacenter" ( goto :set_mm_sw ) else ( goto :store_sw )
@@ -102,17 +102,17 @@ setlocal enabledelayedexpansion
 :set_mm_sw
 	choice /c YN /M "-Process memory settings"
 	if errorlevel 2 ( set "mm_switch=-nomm" & goto :store_sw )
-	if errorlevel 1 ( set "mm_switch=" & goto :store_sw )
+	if errorlevel 1 ( set "mm_switch=-mm" & goto :store_sw )
 :: Store
 :store_sw
 	if "%priv_switch%"=="-nopriv" ( if "%perf_switch%"=="-noperf" ( if "%gp_switch%"=="-nogp" ( goto :serv_sw )))
 	choice /c YN /M "Using Microsoft Store"
-	if errorlevel 2 ( set "store_switch=" & goto :games_sw )
+	if errorlevel 2 ( set "store_switch=-nostore" & goto :games_sw )
 	if errorlevel 1 ( set "store_switch=-store" & goto :games_sw )
 :: Games
 :games_sw
 	choice /c YN /M "Playing games"
-	if errorlevel 2 ( set "games_switch=" & goto :gex_sw )
+	if errorlevel 2 ( set "games_switch=-nogames" & goto :gex_sw )
 	if errorlevel 1 ( set "games_switch=-games" & goto :serv_sw )
 :: Game explorer
 :gex_sw
@@ -123,7 +123,7 @@ setlocal enabledelayedexpansion
 :serv_sw
 	choice /c YN /M "Run services optimization"
 	if errorlevel 2 ( set "serv_switch=-noserv" & goto :idx_sw )
-	if errorlevel 1 ( set "serv_switch=" & goto :enablewl_sw )
+	if errorlevel 1 ( set "serv_switch=-serv" & goto :enablewl_sw )
 :enablewl_sw
 	choice /c ED /M "-Enable or Disable Wireless Lan service"
 	if errorlevel 2 ( set "enablewl_switch=" & goto :enablefps_sw )
