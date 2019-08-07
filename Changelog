@@ -1,3 +1,36 @@
+-06-08-2019 : Optimize NextGen v4.1.0
+	- Now fully customizable, adding arguments for options, allowing to bypass or add some tasks.
+	- New Shortcut script that allow to easily create shortcut with options arguments
+	- Added Help menu. Launch help from main menus or via commandline typing Optimize_NextGen_MDL.exe /?
+	- New mode: Custom mode, unlike fast mode that runs with pre-set options, it will run only with the options you set.
+	  Use shortcut script to set this mode and options, or read Help.
+	- You can set as many arguments as you like, but note that some arguments are made inactive by others, or depending on the Mode you choose.
+	  Everything is explained in Help Menu
+	- Removed all "policies" registry tweaks, Group Policy is manages it all.
+	- LGPO now also adds registry keys and values before importing policy file.
+	- Importing Group Policy settings is now made by LGPO, instead of ugly delete/robocopy. 
+	  HUGE advantage is LGPO merges/adds Group Policy settings, instead of replacing them. I just realized that.
+   	  That means I don't have to create a complete policy file for every configuration as before.
+	  Like one with Store, one with Firefox, one no store no firefox, no store but firefox etc. That was crazy.
+	  Means also the script code for Group Policy task got simplified.
+	- So, separated .pol files and .txt parsed GP settings, and it's much more easy to maintain: I only need to merge chosen settings.
+	  For example Server .pol has only 2 more settings than Windows 10, no need to make a full policy file for it. 
+	  Same applies for Store, Firefox etc.
+	- Added some tweaks (Thanks to rayleigh_otter@MDL)
+	- New Task: .NET Framework web applications peformance tuning. It will tweak .NET web application as described here:
+	  http://docs.frozenmountain.com/websync4/index.html#class=websync-performance-tuning
+	- New Task: Backup Services and/or Group Policy settings.
+	  Services are backed-up as .bat and .reg (reg file allows to save delayed start value).
+          GPO backup is performed by robocopy as well as LGPO.exe, GP security settings are also backed-up.
+	- Now shows the options set/chosen when you run services optimization and Group Policy task.
+	- Now launches about 5 seconds faster. Resizing window buffersize through powershell was slooooow. 
+	  Now using a small C++ utility just made for that.
+	- Overall faster, replaced all duplicate commands by the appropriate for /f loop and syntax. 	
+	- Fixed multi_sz reg add commands.	
+	- Fixed some bugs, now all commands are applied.
+	- New Firefox Policy Template, customized to add more functions: fully disable recommended extensions. 
+	- New screenshots, check here: https://github.com/Thdub/Optimize_NextGen/releases/download/v4.1.0/Optimize.NextGen.Screenshots.html
+	
 -18-07-2019 : Optimize NextGen v3.9.7
 	- Fixed File and Printer sharing option: only Network Discovery was turned ON when enabling File and Printer Sharing option in services optimization.
 	- Improved syntax: added some double quotes, always better/safer.
