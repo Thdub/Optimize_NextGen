@@ -4,6 +4,8 @@
 ::JREPL.BAT by Dave Benham
 ::/History
 ::
+::    2019-07-16 v8.3: Documentation correction - Binary data with null bytes may
+::                     be read via ADO.
 ::    2019-06-05 v8.2: /RTN bug fix - preserve Unicode by using CHCP 65001/utf-8
 ::                     to transfer value to variable unless /XFILE used.
 ::    2019-05-19 v8.1: Add /VT to enable Virtual Terminal ANSI escape sequences.
@@ -158,7 +160,10 @@
 :::            Replace substitution pattern syntax is fully documented at
 :::            https://msdn.microsoft.com/en-US/library/efy6s3e6.aspx
 :::
-:::  Binary input with NULL bytes requires the /M option.
+:::  Binary input with NULL bytes requires either the /M option, or the file
+:::  must be read using ADO by appending the character set name to the file name.
+:::  For example, if your input is ASCII containing null bytes, then you must
+:::  use:   /F "input.txt" /M   or   /F "input.txt|ascii".
 :::
 :::  The meaning of extended ASCII byte codes >= 128 (0x80) is dependent on the
 :::  active code page. Extended ASCII within arguments and variables may require
@@ -349,6 +354,9 @@
 :::            local system. Appending |NB to the |CharSet normally has no impact.
 :::            The |NB No BOM flag is only useful when combined with /O -.
 :::
+:::            Note: Input containing null bytes cannot be read unless ADO is
+:::                  used, or else the /M option must be used.
+:::
 :::      /H  - Highlight all replaced or matched text in the output using the
 :::            strings defined by /HON and /HOFF.
 :::
@@ -537,8 +545,9 @@
 :::            The /M option is incompatible with the /A option unless the /S
 :::            option is also present.
 :::
-:::            Note: If working with binary data containing NULL bytes,
-:::                  then the /M option must be used.
+:::            Note: The /M option is one method to read binary data with null
+:::                  bytes. The other option is to use ADO to read the file.
+:::                  See the /F option for more info.
 :::
 :::      /MATCH - Search and write out each matching string on a new line,
 :::            discarding any non-matching text. The Replace argument is
@@ -1342,7 +1351,7 @@
 :::          3 = JScript runtime error
 ::/VERSION
 :::
-:::  JREPL.BAT version 8.2 was written by Dave Benham, and originally posted at
+:::  JREPL.BAT version 8.3 was written by Dave Benham, and originally posted at
 :::  http://www.dostips.com/forum/viewtopic.php?f=3&t=6044
 ::/
 
